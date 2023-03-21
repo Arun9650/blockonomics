@@ -9,8 +9,6 @@ export default function Home() {
   const [show , setShow ] = useState(false);
 
 
-
-
   return (
     <>
       <Head>
@@ -64,5 +62,4 @@ export default function Home() {
     </>
   )
 }
-
 
