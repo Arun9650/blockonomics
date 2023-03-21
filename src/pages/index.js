@@ -1,16 +1,14 @@
+import axios from 'axios';
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-
 import { useState } from 'react'
-import Paybutton from '../../components/paybutton'
 import Modal from '../../components/modal'
 
 
 export default function Home() {
 
   const [show , setShow ] = useState(false);
-  
+
+
 
 
   return (
@@ -66,3 +64,5 @@ export default function Home() {
     </>
   )
 }
+
+
