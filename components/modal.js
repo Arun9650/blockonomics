@@ -28,7 +28,7 @@ export default function Modal(props) {
           />
         </svg>
 
-        <Paybutton/>
+        <Paybutton props={props.data} />
       </div>
     </div>
   );

@@ -8,7 +8,9 @@ export default function Home() {
 
   const [show , setShow ] = useState(false);
 
+  // const data = context.data;
 
+  // console.log(data);
   return (
     <>
       <Head>
@@ -56,10 +58,31 @@ export default function Home() {
         </div>
     </div>
                          <div className={`absolute   top-0  right-0 left-0 m-auto bottom-0 ${show ? ' z-40 bg-slate-200 bg-opacity-10' : ' z-0'} `} >
-                         <Modal onClose={() => setShow(false)} show={show} className="" />
+                         <Modal  onClose={() => setShow(false)} show={show} className="" />
                          </div>
 </div>
     </>
   )
 }
 
+
+// export async function getServerSideProps(context) {
+//   const res = await axios({
+//     method: 'get',
+//     url: 'https://www.blockonomics.co/api/merchant_orders?limit=5',
+//     headers: {
+//       'content-type': 'application/json',
+//       'Authorization':'Bearer 3Rq4mmTlEt7eCy8R4vw7lYarXNaFj4CKtqWqExNEtOA'
+
+//   },
+  
+//   })
+//   const data = res.data
+//   console.log(data)
+
+//   return {
+//     props: {
+//       data
+//     }
+//   }
+// }

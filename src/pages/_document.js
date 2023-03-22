@@ -6,8 +6,8 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <NextScript  />
-        {/* <script crossOrigin="true" src="https://blockonomics.co/js/pay_widget.js"></script> */}
+        <NextScript  src="https://blockonomics.co/js/pay_widget.js" />
+        <script  src="https://blockonomics.co/js/pay_widget.js"></script>
       </body>
     </Html>
   )
