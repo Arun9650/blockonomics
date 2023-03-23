@@ -72,11 +72,15 @@ export default function paybutton({initialRememberValue}) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
+
+    Cookie.remove('User')
+
     const data = {
       value: value,
-      product_name: name,
+      product_name: headline,
       product_description: description,
-      headline: headline,
+      name : name,
       email: email,
       parent_uid: "2b54a99d29a24d49",
     }
@@ -85,7 +89,7 @@ export default function paybutton({initialRememberValue}) {
     // setMessage(data);
 
 
-    Cookie.set("User", JSON.stringify(data));
+  Cookie.set("User", JSON.stringify(data));
     // Send the form data to our API and get a response.
     // const response = await fetch('/api/form', {
     //   // Body of the request is the JSON data we created above.
@@ -112,22 +116,22 @@ export default function paybutton({initialRememberValue}) {
 
 
   return (
-    <div>
-      {" "}
-      <form  >
-      <div className="flex w-auto gap-y-3 flex-col">
+    <div className="">
+      
+    
+      <div className="flex  gap-y-3 flex-col">
         <input
           type="email"
           id="email"
           name="email"
-          className="bg-transparent border rounded p-2"
+          className="bg-transparent w-auto border rounded p-2"
           placeholder="Email Address"
           onChange={handleEmailInput}
         />
         <input
           type="text"
-          id="first"
-          name="first"
+          id="headline"
+          name="headline"
           className="bg-transparent border rounded p-2"
           placeholder="headline"
          onChange={handleHeadlineInput}
@@ -168,7 +172,7 @@ export default function paybutton({initialRememberValue}) {
        </Link>
         </button>
       </div>
-        </form>
+        
     </div>
   );  
 }
