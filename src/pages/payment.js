@@ -13,11 +13,11 @@ export default function payment({ data }) {
   const successfulPayment = data.historyData.filter(
     (item) => (item.status === 1 || item.status === 2) && item.value > 0
   );
-  // console.log("successfulPayment", successfulPayment[0]);
+  console.log("successfulPayment", successfulPayment[0]);
 
   const latestPayment = successfulPayment[0];
 
-  const latestPaymentValue = latestPayment.value;
+  const latestPaymentValue = (latestPayment?.value || 0);
 
   const payment = () => {
     if (latestPaymentValue <  data.inputData.value) {
@@ -28,6 +28,7 @@ export default function payment({ data }) {
           msg_area: "bitcoinpay", 
           uid: data.responseID.uid,
           email: data.inputData.email,
+          name: data.inputData.name
         });
       }
 
@@ -102,7 +103,7 @@ export async function getServerSideProps({ req, res }) {
   const result = decodeURIComponent(resutl);
   let a = JSON.parse(result);
 
-  const api_key = "3Rq4mmTlEt7eCy8R4vw7lYarXNaFj4CKtqWqExNEtOA";
+  const api_key = "zurpyboOQUMU9nQT1mYK4ruTPXg4UFagdzZ5643HSv8";
   const urlforProducts = "https://www.blockonomics.co/api/create_temp_product";
   const urlForHistory = "https://www.blockonomics.co/api/merchant_orders?limit=15";
 

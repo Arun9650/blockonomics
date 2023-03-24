@@ -55,7 +55,7 @@ export default function paybutton() {
       product_description: description,
       name : name,
       email: email,
-      parent_uid: "2b54a99d29a24d49",
+      parent_uid: "3c8e3586f7394d97",
     }       
 
 
