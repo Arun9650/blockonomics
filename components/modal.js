@@ -6,9 +6,9 @@ export default function Modal(props) {
   }
 
   return (
-    <div class="flex w-full  justify-center items-center  h-screen">
-      <div  style={{backdropFilter:"blur(30px)"}} class="block relative max-w-sm rounded-lg bg-white bg-opacity-5 bg-clip-padding p-6 shadow-lg   ">
-        <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
+    <div className="flex w-full  justify-center items-center  h-screen">
+      <div  style={{backdropFilter:"blur(30px)"}} className="block relative max-w-xl w-96 focus:outline-none rounded-lg bg-white bg-opacity-5 bg-clip-padding p-6 shadow-lg   ">
+        <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
           Pay and get Write massage 
         </h5>
        
