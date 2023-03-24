@@ -20,7 +20,7 @@ export default function payment({ data }) {
   const latestPaymentValue = latestPayment.value;
 
   const payment = () => {
-    if (latestPaymentValue < data.inputData.value) {
+    if (latestPaymentValue <  data.inputData.value) {
 
       function payWithBitcoin() {
         // eslint-disable-next-line no-undef
@@ -50,7 +50,7 @@ export default function payment({ data }) {
           <h1 className="text-4xl p-5 pt-0 text-center  font-semibold">
             Payment Details{" "}
           </h1>
-          <table className="table-fixed  min-h-max text-center h-2/4 w-auto">
+          <table className="table-auto  min-h-max  h-2/4 w-auto">
             {/* <thead>
               <tr>
                 <th>Song</th>
@@ -58,7 +58,7 @@ export default function payment({ data }) {
                 <th>Year</th>
               </tr>
             </thead> */}
-            <tbody className=" divide-y w-auto text-lg text-center rounded">
+            <tbody className=" divide-y w-max  text-lg  rounded">
               <tr>
                 <td>Headline</td>
                 <td>{data.inputData.product_name}</td>
@@ -89,7 +89,7 @@ export default function payment({ data }) {
           >
             Pay with Bitcoin
           </button>
-          <div id="bitcoinpay"></div>
+          <div id="bitcoinpay" ></div>
         </div>
       </div>
     </>
