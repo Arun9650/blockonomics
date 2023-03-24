@@ -59,7 +59,7 @@ export default function payment({ data }) {
                 <th>Year</th>
               </tr>
             </thead> */}
-            <tbody className=" divide-y w-max  text-lg  rounded">
+            <tbody className=" divide-y w-max gap-2 text-lg  rounded">
               <tr>
                 <td>Headline</td>
                 <td>{data.inputData.product_name}</td>

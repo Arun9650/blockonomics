@@ -12,10 +12,10 @@ export default function Home(context) {
    const {data} = context;
   //  console.log(data);
 
-   const successfulPayment = data.filter((item) =>  (item.status === 2 || item.status === 1) &&  item.value > 0 );
+   const successfulPayment = data.filter((item) =>  (item.status === 1 || item.status === 2) &&  item.value > 0 );
 
    const latestPayment = successfulPayment[0];
-  //  console.log(latestPayment)
+   console.log(latestPayment)
 
   const latestPaymentValue = (latestPayment?.value || 0);
   return (
