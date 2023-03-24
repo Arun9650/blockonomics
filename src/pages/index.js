@@ -78,7 +78,7 @@ export async function getServerSideProps(context) {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      Authorization: "Bearer 3Rq4mmTlEt7eCy8R4vw7lYarXNaFj4CKtqWqExNEtOA"
+      Authorization: "Bearer zurpyboOQUMU9nQT1mYK4ruTPXg4UFagdzZ5643HSv8"
     }
   }
 

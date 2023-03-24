@@ -125,7 +125,7 @@ export default function paybutton(props) {
           onChange={handleValueInput}
         />
         <p className={`invisible   text-md ${latestPaymentValue < value ? "h-0  " : " h-4 -mt-3 peer-focus-visible:visible"}`}>
-      Please provide a amount greater then {latestPaymentValue} 
+      Please provide a amount greater then ${latestPaymentValue} 
     </p>
 
         <button onClick={handleSubmit} className=""  onSubmit={handleSubmit}>
