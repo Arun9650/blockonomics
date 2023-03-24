@@ -1,24 +1,13 @@
-import axios from "axios";
+
 import React from "react";
-import { useState, useEffect } from "react";
-import Payment from "@/pages/payment";
+import { useState } from "react";
 import Link from "next/link";
 
-import { useContext } from "react";
-import { Message_data } from "./appcontext";
-
-
-import { useCookies } from "react-cookie"
-
 import Cookie from "js-cookie";
-import { parseCookies } from "../lib/parseCookies";
 
 
-export default function paybutton({initialRememberValue}) {
 
-  // const [cookie, setCookie] = useCookies(["user"])
-  // const {message, setMessage} =  useContext(Message_data);
-  const [rememberMe, setRememberMe] = useState({});
+export default function paybutton() {
 
 
   const [email, setEmail] = useState("")
@@ -29,22 +18,6 @@ export default function paybutton({initialRememberValue}) {
 
 
 
-
-  // const [data , setData ] = useState({})
-
-
-  // function payWithBitcoin() {
-  //   // eslint-disable-next-line no-undef
-  //   Blockonomics.widget({
-  //     msg_area: "bitcoinpay",
-  //     uid: "2b54a99d29a24d49",
-  //     email: email,
-  //     Headline: headline,
-  //     description: description,
-  //       name:name,
-  //     value: value,
-  //   });
-  // }
 
   function handleEmailInput(e) {
     setEmail(e.target.value);
@@ -83,31 +56,10 @@ export default function paybutton({initialRememberValue}) {
       name : name,
       email: email,
       parent_uid: "2b54a99d29a24d49",
-    }
-
-
-    // setMessage(data);
+    }       
 
 
   Cookie.set("User", JSON.stringify(data));
-    // Send the form data to our API and get a response.
-    // const response = await fetch('/api/form', {
-    //   // Body of the request is the JSON data we created above.
-    //   body: data,
-    //   // Tell the server we're sending JSON.
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   // The method is POST because we are sending data.
-    //   method: 'POST',
-    // })
-
-    // const result = await response.json()
-    
-
-
-
-
 
 
   }
@@ -161,11 +113,6 @@ export default function paybutton({initialRememberValue}) {
           onChange={handleValueInput}
         />
 
-
-        {/* <button id="pay"  onClick={payWithBitcoin}>Pay with Bitcoin</button>
-        <div id="bitcoinpay"></div> */}
-
-
         <button onClick={handleSubmit}  onSubmit={handleSubmit}>
        <Link href="/payment">
            Submit
@@ -176,29 +123,3 @@ export default function paybutton({initialRememberValue}) {
     </div>
   );  
 }
-
-
-// export async function getServerSideProps(context) {
-
-
- 
-
-//   const res = await  axios({
-//     method: "post",
-//     url: url,
-//     headers: {
-//       "Content-Type": "text/json",
-//       "Authorization" : ' Bearer' + api_Key,
-//     },
-//     body: JSON.stringify(data),
-//   })
-
-//   console.log(res.data)
-
-//   return {
-//     props : {
-//       data: "data"
-//     }
-//   }
-
-// }

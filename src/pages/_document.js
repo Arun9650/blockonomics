@@ -6,7 +6,7 @@ export default function Document() {
       <Head />
       <body>
         <Main />
-        <NextScript  src="https://blockonomics.co/js/pay_widget.js" />
+         <NextScript  />
         <script  src="https://blockonomics.co/js/pay_widget.js"></script>
       </body>
     </Html>
