@@ -7,7 +7,12 @@ import Cookie from "js-cookie";
 
 
 
-export default function paybutton() {
+export default function paybutton(props) {
+
+  const latestPaymentValue = props.value;
+  console.log(latestPaymentValue)
+    // const some = props.data.latestPaymentValue;
+    // console.log("some", some)
 
 
   const [email, setEmail] = useState("")
@@ -76,10 +81,14 @@ export default function paybutton() {
           type="email"
           id="email"
           name="email"
-          className="bg-transparent w-auto border rounded p-2"
+          className="bg-transparent w-auto peer border rounded mt-2 -mb-2 p-2 "
           placeholder="Email Address"
           onChange={handleEmailInput}
         />
+         <p className={`invisible   text-sm font-semibold peer-invalid:visible peer-invalid:h-3 peer-valid:h-0 "}`}>
+      Please provide a valid amount .
+    </p>
+
         <input
           type="text"
           id="headline"
@@ -105,15 +114,21 @@ export default function paybutton() {
           onChange={handleNameInput}
         />
 
+
+    
         <input
           type="number"
           id="value"
-          className="bg-transparent border rounded p-2"
+          className="bg-transparent peer border rounded p-2"
           placeholder="value USD"
+
           onChange={handleValueInput}
         />
+        <p className={`invisible   text-md ${latestPaymentValue < value ? "h-0  " : " h-4 -mt-3 peer-focus-visible:visible"}`}>
+      Please provide a amount greater then {latestPaymentValue} 
+    </p>
 
-        <button onClick={handleSubmit}  onSubmit={handleSubmit}>
+        <button onClick={handleSubmit} className=""  onSubmit={handleSubmit}>
        <Link href="/payment">
            Submit
        </Link>

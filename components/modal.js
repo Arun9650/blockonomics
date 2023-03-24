@@ -1,6 +1,9 @@
 import React from "react";
 import Paybutton from "./paybutton";
 export default function Modal(props) {
+
+  
+
   if (!props.show) {
     return null;
   }
@@ -18,8 +21,8 @@ export default function Modal(props) {
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
-          stroke="black"
-          className="w-6 h-6 absolute -top-11 -right-14 cursor-pointer"
+          stroke="white"
+          className="w-6 h-6 absolute -top-11 -right-14  cursor-pointer"
         >
           <path
             strokeLinecap="round"
@@ -28,7 +31,7 @@ export default function Modal(props) {
           />
         </svg>
 
-        <Paybutton props={props.data} />
+        <Paybutton value={props.data} />
       </div>
     </div>
   );

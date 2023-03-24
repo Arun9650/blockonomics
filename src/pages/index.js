@@ -17,7 +17,7 @@ export default function Home(context) {
    const latestPayment = successfulPayment[0];
   //  console.log(latestPayment)
 
- 
+  const latestPaymentValue = (latestPayment?.value || 0);
   return (
     <>
       <Head>
@@ -62,7 +62,7 @@ export default function Home(context) {
         </div>
     </div>
                          <div className={`absolute   top-0  right-0 left-0 m-auto bottom-0 ${show ? ' z-40 bg-slate-200 bg-opacity-10' : ' z-0'} `} >
-                         <Modal  onClose={() => setShow(false)} show={show} className="" />
+                         <Modal  data={latestPaymentValue} onClose={() => setShow(false)} show={show}/>
                          </div>
 </div>
     </>
