@@ -1,4 +1,4 @@
-import axios from 'axios';
+
 import Head from 'next/head'
 import { useState } from 'react'
 import Modal from '../../components/modal'
